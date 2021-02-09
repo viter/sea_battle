@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.title {
+  font-family: 'Cormorant';
+  font-size: 80px;
+  color: #c2d1d2;
+  padding-bottom: 80px;
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.showcase .deck {
+  background-color: #0b8747;
+}
+
+.deck {
+  background-color: #4c5f60;
+  height: 24px;
+  width: 24px;
+  margin: 1px;
+}
+
+#own .deck.set {
+  background-color: #0b8747;
+}
+
+.deck.destroid {
+  background-color: #9e4225;
+}
+
+.deck.missed {
+  background-color: #127176;
+}
+
+.field .deck:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.row,
+.container {
+  display: flex;
+}
+
+.container {
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.field {
+  margin: 0 50px;
+}
+
+.blinking .deck {
+  animation: blinkingText 1s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    background-color: #0b8747;
+  }
+  49% {
+    background-color: #0b8747;
+  }
+  60% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #0b8747;
+  }
+}
